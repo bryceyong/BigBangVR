@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &442282312089291151
+--- !u!1 &7243068064717587142
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 442282312089291145}
-  - component: {fileID: 442282312089291144}
-  - component: {fileID: 442282312089291147}
-  - component: {fileID: 442282312089291146}
-  - component: {fileID: 442282312089291149}
-  - component: {fileID: 442282312089291148}
+  - component: {fileID: 6721571851448559000}
+  - component: {fileID: 5332090505837280795}
+  - component: {fileID: 2090241987333921246}
+  - component: {fileID: 9207657399230417754}
+  - component: {fileID: 4895131997084687063}
+  - component: {fileID: 1786734221507535766}
   m_Layer: 8
-  m_Name: V-Light 2 (2)
+  m_Name: V-Light 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &442282312089291145
+--- !u!4 &6721571851448559000
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 442282312089291151}
-  m_LocalRotation: {x: 0.9238796, y: -0, z: -0, w: 0.38268343}
-  m_LocalPosition: {x: -1, y: 4.9713497, z: -0.8691336}
+  m_GameObject: {fileID: 7243068064717587142}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 1, y: 2.9567327, z: -0.86913395}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &442282312089291144
+--- !u!33 &5332090505837280795
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 442282312089291151}
+  m_GameObject: {fileID: 7243068064717587142}
   m_Mesh: {fileID: 0}
---- !u!23 &442282312089291147
+--- !u!23 &2090241987333921246
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 442282312089291151}
+  m_GameObject: {fileID: 7243068064717587142}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -84,13 +84,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!20 &442282312089291146
+--- !u!20 &9207657399230417754
 Camera:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 442282312089291151}
+  m_GameObject: {fileID: 7243068064717587142}
   m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 2
@@ -107,11 +107,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0
+  near clip plane: -2
   far clip plane: 2
   field of view: 45
   orthographic: 1
-  orthographic size: 0.4
+  orthographic size: 2
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -127,13 +127,13 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!114 &442282312089291149
+--- !u!114 &4895131997084687063
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 442282312089291151}
+  m_GameObject: {fileID: 7243068064717587142}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1e5529f2795e6344b38c49382e29006, type: 3}
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lockTransforms: 0
   renderWireFrame: 0
-  lightType: 3
+  lightType: 1
   lightMultiplier: 2
   spotExponent: 2
   constantAttenuation: 2.4999998
@@ -151,8 +151,8 @@ MonoBehaviour:
   slices: 30
   colorTint: {r: 1, g: 1, b: 1, a: 1}
   noiseSpeed: {x: 0, y: 0, z: 0}
-  useDithering: 1
-  ditherAmount: 1
+  useDithering: 0
+  ditherAmount: 0
   useSoftBlend: 0
   useCurves: 0
   worldScrollAmount: 0
@@ -163,9 +163,9 @@ MonoBehaviour:
   renderFullShadows: 0
   _renderShadowMapInUpdate: 0
   spotRange: 2
-  spotNear: 0
+  spotNear: -2
   spotAngle: 45
-  orthoSize: 0.4
+  orthoSize: 1
   spotEmission: {fileID: 0}
   spotNoise: {fileID: 0}
   spotShadow: {fileID: 0}
@@ -239,13 +239,13 @@ MonoBehaviour:
   orthoMaterial: {fileID: 0}
   renderDepthShader: {fileID: 4800000, guid: 26c171c785261784f8909aae5f3697e4, type: 3}
   meshContainer: {fileID: 0}
---- !u!108 &442282312089291148
+--- !u!108 &1786734221507535766
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 442282312089291151}
+  m_GameObject: {fileID: 7243068064717587142}
   m_Enabled: 1
   serializedVersion: 10
   m_Type: 2
