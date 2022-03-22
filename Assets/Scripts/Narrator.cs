@@ -11,11 +11,15 @@ public class Narrator : MonoBehaviour
 		"Welcome new creator!",
 		"I am here to assist the creation of your world by giving you the basic information of a life sustaining world, Earth.",
 		"We can’t create in the dark so why don’t you turn the lights on, don’t want to strain your eyes.", 
-		"One (tap, clap, etc)  should do it but whatever you're feeling",
+		"One flashbang should do it but whatever you're feeling.",
 	};
+	string progressStr = "";
+	string addStr = "||||||||";
 	public TextMeshProUGUI narration;
+	public TextMeshProUGUI progress;
 	public Button yourButton;
 	private int i = 0;
+	private int j = 0;
     void Start()
     {
 		Button btn = yourButton.GetComponent<Button>();
@@ -27,6 +31,12 @@ public class Narrator : MonoBehaviour
 		narration.SetText(narrationArr[i]);
 		if(i < 4){
 			i++;
+			progressStr += addStr;
 		}
+	}
+
+	void Update()
+	{
+		progress.SetText(progressStr);
 	}
 }
