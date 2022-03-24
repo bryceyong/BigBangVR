@@ -1,13 +1,14 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
+using Valve.VR.InteractionSystem;
 
-namespace Valve.VR.InteractionSystem.Sample
-{
-    public class Grenade : MonoBehaviour
+
+    public class MyGrenade : MonoBehaviour
     {
+        public PlayerController playerController;
         public GameObject explodePartPrefab;
         public int explodeCount = 10;
-       
+
 
         public float minMagnitudeToExplode = 1f;
 
@@ -32,7 +33,7 @@ namespace Valve.VR.InteractionSystem.Sample
                 }
 
                 Destroy(this.gameObject);
+                playerController.chapter = 2;
             }
         }
     }
-}
