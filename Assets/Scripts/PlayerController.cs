@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if(chapter == 2 && firstTime)
         {
             transform.position = new Vector3(30.0f, 5.0f, -1.5f);
