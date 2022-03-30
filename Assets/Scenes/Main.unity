@@ -1958,6 +1958,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaed5664297092441a4b93e3bf0d4a77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flash1: {fileID: 684946724}
+  flash2: {fileID: 256250098}
+  flash3: {fileID: 2122278554}
+  flash4: {fileID: 1397786666}
   narration: {fileID: 916804454}
   progress: {fileID: 2139298907}
   yourButton: {fileID: 471584357}
@@ -2185,7 +2189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: 1197432528}
-  explodePartPrefab: {fileID: 0}
+  explodePartPrefab: {fileID: 7243068064717587142, guid: 4bad47f4129d2264d86e0f6ddd7fdeb5, type: 3}
   explodeCount: 0
   minMagnitudeToExplode: 1
 --- !u!1 &278984380
@@ -2486,7 +2490,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1000012099312676, guid: a7c2b37096983fb40addeabf8a2aefbe, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000011278773620, guid: a7c2b37096983fb40addeabf8a2aefbe, type: 3}
       propertyPath: m_RootOrder
@@ -2654,7 +2658,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1000012099312676, guid: a7c2b37096983fb40addeabf8a2aefbe, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000011278773620, guid: a7c2b37096983fb40addeabf8a2aefbe, type: 3}
       propertyPath: m_RootOrder
@@ -4143,7 +4147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerController: {fileID: 1197432528}
   explodePartPrefab: {fileID: 7243068064717587142, guid: 4bad47f4129d2264d86e0f6ddd7fdeb5, type: 3}
-  explodeCount: 1
+  explodeCount: 0
   minMagnitudeToExplode: 1
 --- !u!1 &687222110
 GameObject:
@@ -4415,7 +4419,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1000012099312676, guid: a7c2b37096983fb40addeabf8a2aefbe, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000011278773620, guid: a7c2b37096983fb40addeabf8a2aefbe, type: 3}
       propertyPath: m_RootOrder
@@ -5841,6 +5845,10 @@ PrefabInstance:
     - target: {fileID: 1000012099312676, guid: a7c2b37096983fb40addeabf8a2aefbe, type: 3}
       propertyPath: m_Name
       value: Flashbang1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012099312676, guid: a7c2b37096983fb40addeabf8a2aefbe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000011278773620, guid: a7c2b37096983fb40addeabf8a2aefbe, type: 3}
       propertyPath: m_RootOrder
@@ -8971,8 +8979,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec69d5371afc5d429435cd4dd66f8ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
-  explodePartPrefab: {fileID: 0}
+  playerController: {fileID: 1197432528}
+  explodePartPrefab: {fileID: 7243068064717587142, guid: 4bad47f4129d2264d86e0f6ddd7fdeb5, type: 3}
   explodeCount: 0
   minMagnitudeToExplode: 1
 --- !u!1001 &1426150125
@@ -12511,8 +12519,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec69d5371afc5d429435cd4dd66f8ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
-  explodePartPrefab: {fileID: 0}
+  playerController: {fileID: 1197432528}
+  explodePartPrefab: {fileID: 7243068064717587142, guid: 4bad47f4129d2264d86e0f6ddd7fdeb5, type: 3}
   explodeCount: 0
   minMagnitudeToExplode: 1
 --- !u!1 &2139298905

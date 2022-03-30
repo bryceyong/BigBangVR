@@ -5,7 +5,11 @@ using UnityEngine.UI;
 using TMPro;
 public class Narrator : MonoBehaviour
 {
-    // Start is called before the first frame update
+	// Start is called before the first frame update
+	public GameObject flash1;
+	public GameObject flash2;
+	public GameObject flash3;
+	public GameObject flash4;
 
 	private string[] narrationArr = {
 		"Welcome new creator!",
@@ -32,6 +36,13 @@ public class Narrator : MonoBehaviour
 		if(i < 4){
 			i++;
 			progressStr += addStr;
+		} 
+		if(i == 3)
+        {
+			flash1.SetActive(true);
+			flash2.SetActive(true);
+			flash3.SetActive(true);
+			flash4.SetActive(true);
 		}
 	}
 

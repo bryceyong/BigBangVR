@@ -37,6 +37,10 @@ using Valve.VR.InteractionSystem;
                 Destroy(this.gameObject);
 
                 playerController.grenadeCount += 1;
+                if(playerController.grenadeCount > 2)
+            {
+                playerController.chapter = 2;
+            }
             }
         }
     }
