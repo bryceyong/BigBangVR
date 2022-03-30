@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public int chapter = 0;
     public bool firstTime = true;
+    public int grenadeCount = 0;
     // Start is called before the first frame update
     void Start()
     {

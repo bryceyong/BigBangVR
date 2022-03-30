@@ -7,7 +7,8 @@ using Valve.VR.InteractionSystem;
     {
         public PlayerController playerController;
         public GameObject explodePartPrefab;
-        public int explodeCount = 10;
+        public int explodeCount = 0;
+
 
 
         public float minMagnitudeToExplode = 1f;
@@ -30,10 +31,12 @@ using Valve.VR.InteractionSystem;
                 {
                     GameObject explodePart = (GameObject)GameObject.Instantiate(explodePartPrefab, this.transform.position, this.transform.rotation);
                     explodePart.GetComponentInChildren<MeshRenderer>().material.SetColor("_TintColor", Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f));
+ 
                 }
 
                 Destroy(this.gameObject);
-                playerController.chapter = 2;
+
+                playerController.grenadeCount += 1;
             }
         }
     }
