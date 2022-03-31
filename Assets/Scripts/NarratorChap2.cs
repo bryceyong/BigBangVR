@@ -29,12 +29,10 @@ public class NarratorChap2 : MonoBehaviour
 	private int j = 0;
     void Start()
     {
-		Button btn = yourButton.GetComponent<Button>();
-		btn.onClick.AddListener(TaskOnClick);
     }
 
     // Update is called once per frame
-	void TaskOnClick(){
+	public void skip(){
 		narration.SetText(narrationArr2[i]);
 		if(i < 7){
 			i++;

@@ -19,14 +19,26 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
 
-        if(chapter == 2 && firstTime)
+        if (chapter == 2 && firstTime)
         {
             transform.position = new Vector3(30.0f, 0.0f, 0f);
             firstTime = false;
             canvas.SetActive(true);
             FadeOut();
         }
-        
+
+        if (chapter == 3)
+        {
+            transform.position = new Vector3(60.0f, 5.0f, -5f);
+        }
+
+        if (chapter == 4)
+        {
+            transform.position = new Vector3(0.0f, 6f, -35f);
+        }
+
+
+
     }
 
     // Start is called before the first frame update
