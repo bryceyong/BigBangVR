@@ -17,8 +17,7 @@ public class Narrator : MonoBehaviour
 		"We can’t create in the dark so why don’t you turn the lights on, don’t want to strain your eyes.", 
 		"One flashbang should do it but whatever you're feeling.",
 	};
-	string progressStr = "";
-	string addStr = "||||||||";
+
 	public TextMeshProUGUI narration;
 	public TextMeshProUGUI progress;
 	public Button yourButton;
@@ -35,19 +34,13 @@ public class Narrator : MonoBehaviour
 		narration.SetText(narrationArr[i]);
 		if(i < 4){
 			i++;
-			progressStr += addStr;
 		} 
-		if(i == 3)
+		if(i == 4)
         {
 			flash1.SetActive(true);
 			flash2.SetActive(true);
 			flash3.SetActive(true);
 			flash4.SetActive(true);
 		}
-	}
-
-	void Update()
-	{
-		progress.SetText(progressStr);
 	}
 }
