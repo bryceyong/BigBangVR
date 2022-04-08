@@ -10,7 +10,7 @@ public class TreeGrowL : MonoBehaviour
     private float zMax = 2.43017f;
 
     //starting position
-    public static int direction = 1; //positive to start
+    public static int direction = 0; //positive to start
     private void Start()
     {
         transform.localScale = new Vector3(2.187153f, 0, 0);
