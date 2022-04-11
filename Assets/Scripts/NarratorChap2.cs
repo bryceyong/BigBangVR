@@ -34,19 +34,21 @@ public class NarratorChap2 : MonoBehaviour
 
     // Update is called once per frame
 	public void skip(){
-		narration.SetText(narrationArr2[i]);
-		if(i < 3){
+		
+		if(i < 4){
+			narration.SetText(narrationArr2[i]);
 			i++;
 		} 
-		if(i == 3)
+		if(i == 4)
         {
 			hoverButtons.SetActive(true);
 		}
-		if(i < 7 && done == 1)
+		if(i < 8 && done == 1)
         {
+			narration.SetText(narrationArr2[i]);
 			i++;
         }
-		if(i == 7){
+		if(i == 8){
 			wheel.SetActive(true);
 		}
 	}
@@ -56,9 +58,12 @@ public class NarratorChap2 : MonoBehaviour
 
 	public void Done()
     {
-		done = 1;
-		i++;
-		CloudRise.direction = 1;
+		if(done == 0)
+        {
+			done = 1;
+			narration.SetText(narrationArr2[i]);
+			i++;
+			CloudRise.direction = 1;
+		}
 	}
-
 }
