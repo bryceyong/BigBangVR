@@ -11,6 +11,7 @@ public class Narrator : MonoBehaviour
 	public GameObject flash3;
 	public GameObject flash4;
 
+
 	private string[] narrationArr = {
 		"Chapter 1 - Light",
 		"Welcome new creator!",
@@ -18,6 +19,7 @@ public class Narrator : MonoBehaviour
 		"We can’t create in the dark so why don’t you turn the lights on, don’t want to strain your eyes.", 
 		"One flashbang should do it but whatever you're feeling.",
 	};
+
 
 	public TextMeshProUGUI narration;
 	public TextMeshProUGUI progress;

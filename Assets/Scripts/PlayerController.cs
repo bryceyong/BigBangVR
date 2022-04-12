@@ -17,10 +17,13 @@ public class PlayerController : MonoBehaviour
     public int trig = 0;
     public float pushSpeed = 1;
     public GameObject rain;
+    public AudioSource music;
     // Start is called before the first frame update
     void Start()
     {
+        music.Play();
         chapter = 1;
+
     }
 
     // Update is called once per frame
@@ -29,7 +32,7 @@ public class PlayerController : MonoBehaviour
 
         if (chapter == 2 && firstTime)
         {
-            transform.position = new Vector3(30.0f, 0.0f, 0f);
+            transform.position = new Vector3(30.0f, -1.0f, 0f);
             firstTime = false;
             canvas.SetActive(true);
             FadeOut();
