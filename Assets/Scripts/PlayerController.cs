@@ -9,10 +9,14 @@ public class PlayerController : MonoBehaviour
     public int grenadeCount = 0;
     public CanvasGroup uiElement;
     public CanvasGroup uiElement2;
+    public CanvasGroup uiElement3;
     public GameObject canvas;
     public GameObject canvas2;
+    public GameObject canvas3;
     public int pushback = 0;
+    public int trig = 0;
     public float pushSpeed = 1;
+    public GameObject rain;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,26 +39,30 @@ public class PlayerController : MonoBehaviour
         {
             float zNew = transform.position.z + -pushSpeed * Time.deltaTime;
             transform.position = new Vector3(30, 0.0f, zNew);
+            if(zNew < -6  && trig == 0)
+            {
+                canvas2.SetActive(true);
+                trig = 1;
+                FadeIn2();
+            }
             if (zNew < -13)
             {
-                FadeIn2();
                 FadeOut2();
                 transform.position = new Vector3(63.0f, 0.0f, -7f);
-                firstTime = false;
-                canvas2.SetActive(true);
-                
-                //FadeOut2();
+                firstTime = false;            
             }
-
         }
 
-        if (chapter == 4)
+        if (chapter == 4 && firstTime)
         {
-            transform.position = new Vector3(0.0f, 6f, -35f);
+            canvas3.SetActive(true);
+            FadeIn3();
+            firstTime = false;
+            Invoke("Transition3", 5f);
+            
+            
+
         }
-
-
-
     }
 
     // Start is called before the first frame update
@@ -95,7 +103,7 @@ public class PlayerController : MonoBehaviour
 
     public void FadeIn2()
     {
-        StartCoroutine(FadeCanvasGroup2(uiElement2, uiElement2.alpha, 0));
+        StartCoroutine(FadeCanvasGroup2(uiElement2, uiElement2.alpha, 1));
     }
 
     public void FadeOut2()
@@ -118,7 +126,38 @@ public class PlayerController : MonoBehaviour
             if (percentageComplete >= 1) break;
             yield return new WaitForEndOfFrame();
         }
+    }
 
-        canvas2.SetActive(false);
+    public void FadeIn3()
+    {
+        StartCoroutine(FadeCanvasGroup3(uiElement3, uiElement3.alpha, 1));
+    }
+
+    public void FadeOut3()
+    {
+        StartCoroutine(FadeCanvasGroup3(uiElement3, uiElement3.alpha, 0));
+    }
+    public IEnumerator FadeCanvasGroup3(CanvasGroup cg, float start, float end, float lerpTime = 5.0f)
+    {
+
+        float _timeStartedLerping = Time.time;
+        float _timeSinceStarted = Time.time - _timeStartedLerping;
+        float percentageComplete = _timeSinceStarted / lerpTime;
+
+        while (true)
+        {
+            _timeSinceStarted = Time.time - _timeStartedLerping;
+            percentageComplete = _timeSinceStarted / lerpTime;
+            float currentValue = Mathf.Lerp(start, end, percentageComplete);
+            cg.alpha = currentValue;
+            if (percentageComplete >= 1) break;
+            yield return new WaitForEndOfFrame();
+        }
+    }
+    public void Transition3()
+    {
+        transform.position = new Vector3(-2.34f, 1f, -37.74f);
+        rain.SetActive(false);
+        FadeOut3();
     }
 }

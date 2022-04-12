@@ -20,13 +20,13 @@ public class Anchor : MonoBehaviour
     {
         if(sun == true)
         {
-            Vector3 direction = new Vector3(0, 0, 360);
+            Vector3 direction = new Vector3(360, 0, 0);
             Quaternion targetRotation = Quaternion.Euler(direction);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, Time.deltaTime * 20f);
         }
         if(moon == true)
         {
-            Vector3 direction = new Vector3(0, 0, 180);
+            Vector3 direction = new Vector3(180, 0, 0);
             Quaternion targetRotation = Quaternion.Euler(direction);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, Time.deltaTime * 20f);
         }

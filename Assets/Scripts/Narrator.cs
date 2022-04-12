@@ -12,6 +12,7 @@ public class Narrator : MonoBehaviour
 	public GameObject flash4;
 
 	private string[] narrationArr = {
+		"Chapter 1 - Light",
 		"Welcome new creator!",
 		"I am here to assist the creation of your world by giving you the basic information of a life sustaining world, Earth.",
 		"We can’t create in the dark so why don’t you turn the lights on, don’t want to strain your eyes.", 

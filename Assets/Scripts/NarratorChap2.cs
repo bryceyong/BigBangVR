@@ -8,6 +8,7 @@ public class NarratorChap2 : MonoBehaviour
 	// Start is called before the first frame update
 
 	private string[] narrationArr2 = {
+		"Chapter 2 - Sky",
 		"Now that we can see, let's create a planet!",
 		"Before we make the rock let's collect the needed gasses and elements to create a bubble for our planet.",
 		"Let's cover what is needed to allow for an inhabitable planet?", 
@@ -35,20 +36,20 @@ public class NarratorChap2 : MonoBehaviour
     // Update is called once per frame
 	public void skip(){
 		
-		if(i < 4){
+		if(i < 5){
 			narration.SetText(narrationArr2[i]);
 			i++;
 		} 
-		if(i == 4)
+		if(i == 5)
         {
 			hoverButtons.SetActive(true);
 		}
-		if(i < 8 && done == 1)
+		if(i < 9 && done == 1)
         {
 			narration.SetText(narrationArr2[i]);
 			i++;
         }
-		if(i == 8){
+		if(i == 9){
 			wheel.SetActive(true);
 		}
 	}
