@@ -6,7 +6,7 @@ public class CloudRise : MonoBehaviour
 {
     // Start is called before the first frame update
     public float speed = 1.0f;
-    private float yMax = -4.0f;
+    private float yMax = -2.0f;
 
  //starting position
     public static int direction = 0; //positive to start
