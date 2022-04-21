@@ -15,7 +15,7 @@ public class WaterFlow : MonoBehaviour
     {
        
         float zNew = transform.position.z + direction * speed * Time.deltaTime;
-        transform.position = new Vector3(30, -1.0f, zNew);
+        transform.position = new Vector3(transform.position.x, transform.position.y, zNew);
         if(zNew < zMax ){
             direction = 0;
         }
