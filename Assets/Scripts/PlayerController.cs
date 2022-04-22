@@ -18,18 +18,12 @@ public class PlayerController : MonoBehaviour
     public float pushSpeed = 1;
     public GameObject rain;
     public AudioSource music;
-    public AudioSource buttonClick;
     // Start is called before the first frame update
     void Start()
     {
         music.Play();
         chapter = 1;
 
-    }
-
-    public void ButtonSound()
-    {
-        buttonClick.Play();
     }
 
     // Update is called once per frame
@@ -47,7 +41,7 @@ public class PlayerController : MonoBehaviour
         if (chapter == 3 && firstTime)
         {
             float zNew = transform.position.z + -pushSpeed * Time.deltaTime;
-            transform.position = new Vector3(transform.position.x, transform.position.y, zNew);
+            transform.position = new Vector3(30, 0.0f, zNew);
             if(zNew < -6  && trig == 0)
             {
                 canvas2.SetActive(true);

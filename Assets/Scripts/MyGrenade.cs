@@ -8,8 +8,6 @@ using Valve.VR.InteractionSystem;
         public PlayerController playerController;
         public GameObject explodePartPrefab;
         public int explodeCount = 0;
-        public AudioSource flash;
-    public AudioSource ring;
 
 
 
@@ -29,12 +27,10 @@ using Valve.VR.InteractionSystem;
 
             if (collision.impulse.magnitude > minMagnitudeToExplode)
             {
-            flash.Play();
-            for (int explodeIndex = 0; explodeIndex < explodeCount; explodeIndex++)
+                for (int explodeIndex = 0; explodeIndex < explodeCount; explodeIndex++)
                 {
                     GameObject explodePart = (GameObject)GameObject.Instantiate(explodePartPrefab, this.transform.position, this.transform.rotation);
                     explodePart.GetComponentInChildren<MeshRenderer>().material.SetColor("_TintColor", Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f));
-                    
  
                 }
 
@@ -43,7 +39,6 @@ using Valve.VR.InteractionSystem;
                 playerController.grenadeCount += 1;
                 if(playerController.grenadeCount > 2)
             {
-
                 playerController.chapter = 2;
             }
             }
