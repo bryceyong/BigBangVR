@@ -67,6 +67,7 @@ public class NarratorChap2 : MonoBehaviour
 		}
 	}
 	public void enableWater(){
+		print("trigger");
 		WaterFlow.direction = -1;
 	}
 

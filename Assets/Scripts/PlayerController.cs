@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
 
         if (chapter == 2 && firstTime)
         {
-            transform.position = new Vector3(30.0f, -1.0f, 0f);
+            transform.position = new Vector3(29.6f, -0.5f, 0.5f);
             firstTime = false;
             canvas.SetActive(true);
             FadeOut();
@@ -68,8 +68,12 @@ public class PlayerController : MonoBehaviour
             FadeIn3();
             firstTime = false;
             Invoke("Transition3", 5f);
-            
-            
+           
+        }
+
+        if (chapter == 5 && firstTime)
+        {
+            transform.position = new Vector3(27.78f, 1.5f, -37.91f);
 
         }
     }

@@ -6,7 +6,7 @@ public class WaterFlow : MonoBehaviour
 {
     // Start is called before the first frame update
     public float speed = 1.0f;
-    private float zMax = 0.0f;
+    private float zMax = -45.0f;
 
  //starting position
     public static int direction = 0; //positive to start
@@ -16,7 +16,8 @@ public class WaterFlow : MonoBehaviour
        
         float zNew = transform.position.z + direction * speed * Time.deltaTime;
         transform.position = new Vector3(transform.position.x, transform.position.y, zNew);
-        if(zNew < zMax ){
+        if(zNew < zMax)
+        {
             direction = 0;
         }
     }

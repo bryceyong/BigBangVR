@@ -15,7 +15,7 @@ public class CloudRise : MonoBehaviour
     {
        
         float yNew = transform.position.y + direction * speed * Time.deltaTime;
-        transform.position = new Vector3(30, yNew, 0);
+        transform.position = new Vector3(transform.position.x, yNew, transform.position.z);
         if(yNew > yMax ){
             direction = 0;
         }
