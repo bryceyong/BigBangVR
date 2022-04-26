@@ -11,6 +11,7 @@ public class gun : MonoBehaviour
     public Transform barrelPivot;
     public float shootingSpeed = 1;
     private Interactable interactable;
+    public AudioSource blaster;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,7 +39,9 @@ public class gun : MonoBehaviour
 
     void Fire()
     {
+
         Debug.Log("Fire");
+        blaster.Play();
         Rigidbody bulletrb = Instantiate(bullet, barrelPivot.position, barrelPivot.rotation).GetComponent<Rigidbody>();
         bulletrb.velocity = barrelPivot.forward * shootingSpeed;
     }

@@ -36,6 +36,8 @@ public class NarratorChap4 : MonoBehaviour
 
 		if (i < 8)
 		{
+			playerController.chapter = 5;
+			playerController.firstTime = true;
 			i++;
 			narration.SetText(narrationArr2[i]);
 		}
