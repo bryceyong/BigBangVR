@@ -21,6 +21,9 @@ public class NarratorChap3 : MonoBehaviour
 	public bool buttonPressed;
 	public AudioSource buttonClick;
 	public float timeRemaining = 2;
+	public AudioSource p9;
+	public AudioSource p10;
+	public AudioSource p11;
 
 	private int i = 0;
 
@@ -42,7 +45,7 @@ public class NarratorChap3 : MonoBehaviour
 		// Update is called once per frame
 		public void skip()
 	{
-		if (!buttonPressed)
+		if (!buttonPressed && i < 3)
 		{
 			buttonClick.Play();
 			Delay();
@@ -58,6 +61,21 @@ public class NarratorChap3 : MonoBehaviour
 		{
 			i++;	
 		}
+		if(i == 1)
+        {
+			p9.Play();
+        }
+		if (i == 2)
+		{
+			p9.Stop();
+			p10.Play();
+		}
+		if (i == 1)
+		{
+			p10.Stop();
+			p11.Play();
+		}
+
 		if (i == 3)
 		{
 			rain.SetActive(true);

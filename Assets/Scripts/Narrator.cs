@@ -47,7 +47,7 @@ public class Narrator : MonoBehaviour
 
     void Update()
     {
-        if (buttonPressed)
+        if (buttonPressed && i < 4)
         {
 			if (timeRemaining > 0)
 			{

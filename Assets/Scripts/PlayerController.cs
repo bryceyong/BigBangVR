@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
     public GameObject rain;
     public AudioSource music;
     public AudioSource buttonClick;
+    public AudioSource c3p1;
+    public AudioSource c3p2;
     // Start is called before the first frame update
     void Start()
     {
@@ -58,7 +60,9 @@ public class PlayerController : MonoBehaviour
             {
                 FadeOut2();
                 transform.position = new Vector3(63.0f, 0.0f, -7f);
-                firstTime = false;            
+                firstTime = false;
+                Invoke("C3P1", 2);
+                Invoke("C3P2", 6);
             }
         }
 
@@ -76,6 +80,16 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector3(27.78f, 1.5f, -37.91f);
 
         }
+    }
+
+    public void C3P1()
+    {
+        c3p1.Play();
+    }
+
+    public void C3P2()
+    {
+        c3p2.Play();
     }
 
     // Start is called before the first frame update
