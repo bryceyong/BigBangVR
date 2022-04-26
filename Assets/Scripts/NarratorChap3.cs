@@ -8,10 +8,9 @@ public class NarratorChap3 : MonoBehaviour
 {
 	// Start is called before the first frame update
 	private string[] narrationArr2 = {
-		"Chapter 3 - Then we made dry land",
-		"Welcome back to the surface creator",
-		"Now that we have a solid base, plants would be able to grow",
-		"Sit back watch the magic happen ",
+		"Welcome back to the surface creator.",
+		"Now that we have a solid foundation, plants will be able to grow.",
+		"Sit back and watch the magic happen.",
 	};
 
 	public TextMeshProUGUI narration;
@@ -19,22 +18,48 @@ public class NarratorChap3 : MonoBehaviour
 	public GameObject shrooms;
 	public GameObject rain;
 	public PlayerController playerController;
+	public bool buttonPressed;
+	public AudioSource buttonClick;
+	public float timeRemaining = 2;
 
 	private int i = 0;
 
-
-
-	// Update is called once per frame
-	public void skip()
+	public void Update()
 	{
-		
-		if (i < 4)
+		if (buttonPressed)
 		{
-			i++;
-			narration.SetText(narrationArr2[i]);
+			if (timeRemaining > 0)
+			{
+				timeRemaining -= Time.deltaTime;
+			}
+			else
+			{
+				buttonPressed = false;
+			}
 		}
-		if(i == 4)
-        {
+	}
+
+		// Update is called once per frame
+		public void skip()
+	{
+		if (!buttonPressed)
+		{
+			buttonClick.Play();
+			Delay();
+			buttonPressed = true;
+			timeRemaining = 2;
+		}
+	}
+
+	public void Delay()
+    {
+		narration.SetText(narrationArr2[i]);
+		if (i < 3)
+		{
+			i++;	
+		}
+		if (i == 3)
+		{
 			rain.SetActive(true);
 			grass.SetActive(true);
 			shrooms.SetActive(true);
@@ -43,7 +68,7 @@ public class NarratorChap3 : MonoBehaviour
 			TreeGrowL.direction = 1;
 			TreeGrowSp.direction = 1;
 			Invoke("transition", 10f);
-        }
+		}
 	}
 	public void transition()
     {

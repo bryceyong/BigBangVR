@@ -23,8 +23,8 @@ public class Narrator : MonoBehaviour
 	private string[] narrationArr = {
 		"Welcome new creator!",
 		"I am here to assist the creation of your world by giving you the basic information of a life sustaining one, Earth.",
-		"We can’t create in the dark so why don’t you turn the lights on, I wouldn't want you straining your eyes.", 
-		"Use the flashbangs on your left to light up the room.",
+		"We can’t create in the dark so why don’t you turn the lights on, I wouldn't want you straining your eyes.",
+		"One flashbang should do it but you are the creator.",
 	};
 
 

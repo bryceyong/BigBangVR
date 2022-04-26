@@ -13,11 +13,12 @@ public class NarratorChap2 : MonoBehaviour
 		"First let's recap what's needed to allow for an inhabitable planet.",
 		"For reference, Earth’s atmosphere is composed of about 78 percent nitrogen, 21 percent oxygen, 0.9 percent argon, and 0.1 percent other gasses.",
 		"Within the atmosphere is a range of layers giving a natural protective layer for its surface, which is dependent on the elemental composition in the atmosphere. So what do you want in your atmosphere?",
-		"Use the screen on your left to alter the air composition. Hit done when to you are ready.",
-		"Atmosphere created",
-		"So we have the atmosphere but we also need to make a life sustaining liquid, a base for your world but will also supports the atmosphere too.",
-		"The atmosphere will also serve as a transportation highway for your liquid within our developing world",
-		"Spin the wheel on your right to release the water.",
+		"You can use the buttons on the side to begin adding the desired elements ",
+		"The atmosphere has been created ",
+		"We next need to make a life-sustaining liquid.",
+		"The atmosphere will now act as the superhighway in the sky that moves water everywhere over the Planet. Water at the planet's surface will evaporate into water vapor which rises up into the sky to become part of a cloud.",
+		"Then the water will float off with the winds, eventually releasing water back to Earth as precipitation. A giant cycle fully dependent on two parts for a thriving planet.",
+		"Spin the wheel on the right to release the water.",
 	};
 
 	public TextMeshProUGUI narration;
@@ -35,8 +36,8 @@ public class NarratorChap2 : MonoBehaviour
 	public AudioSource p5;
 	public AudioSource p6;
 	public AudioSource p7;
-	public AudioSource p10;
 	public AudioSource buttonClick;
+	public AudioSource steam;
 	private bool buttonPressed = false;
 	private float timeRemaining = 2;
 	public int done = 0;
@@ -75,7 +76,7 @@ public class NarratorChap2 : MonoBehaviour
 	public void Delay()
     {
 		narration.SetText(narrationArr2[i]);
-		if (i < 10)
+		if (i < 11)
 		{
 			i++;
 		}
@@ -116,7 +117,6 @@ public class NarratorChap2 : MonoBehaviour
 		}
 		if (i == 10)
         {
-			p10.Play();
         }
 		if (i == 6)
 		{
@@ -124,10 +124,11 @@ public class NarratorChap2 : MonoBehaviour
 		}
 		if (i == 7)
         {
+			steam.Play();
 			CloudRise.direction = 1;
 		}
 
-		if (i == 10)
+		if (i == 11)
 		{
 			wheel.SetActive(true);
 		}
