@@ -42,7 +42,6 @@ public class gun : MonoBehaviour
 
         Debug.Log("Fire");
         blaster.Play();
-        Rigidbody bulletrb = Instantiate(bullet, barrelPivot.position, barrelPivot.rotation).GetComponent<Rigidbody>();
-        bulletrb.velocity = barrelPivot.forward * shootingSpeed;
+        Destroy(Instantiate(bullet, barrelPivot.position , barrelPivot.rotation), 0.5f);
     }
 }

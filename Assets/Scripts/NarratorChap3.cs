@@ -70,7 +70,7 @@ public class NarratorChap3 : MonoBehaviour
 			p9.Stop();
 			p10.Play();
 		}
-		if (i == 1)
+		if (i == 3)
 		{
 			p10.Stop();
 			p11.Play();
