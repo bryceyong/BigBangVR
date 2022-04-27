@@ -49,7 +49,6 @@ public class NarratorChap2 : MonoBehaviour
 	public int done = 0;
 	void Update()
 	{
-		print(i.ToString());
 		if (buttonPressed)
 		{
 			if (timeRemaining > 0)
