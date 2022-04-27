@@ -42,6 +42,6 @@ public class gun : MonoBehaviour
 
         Debug.Log("Fire");
         blaster.Play();
-        Destroy(Instantiate(bullet, barrelPivot.position , barrelPivot.rotation), 0.5f);
+        Destroy(Instantiate(bullet, barrelPivot.position , barrelPivot.rotation), 0.15f);
     }
 }
