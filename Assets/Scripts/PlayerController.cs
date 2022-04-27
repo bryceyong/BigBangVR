@@ -78,14 +78,14 @@ public class PlayerController : MonoBehaviour
 
         if (chapter == 5 && firstTime)
         {
-            transform.position = new Vector3(27.78f, 2f, -37.91f);
+            transform.position = new Vector3(27.78f, 1.5f, -37.91f);
 
         }
 
         if (chapter == 6 && firstTime)
         {
 
-            transform.position = new Vector3(0.5f, 1f, -72f);
+            transform.position = new Vector3(0.5f, 1.5f, -72f);
 
         }
     }
@@ -191,7 +191,7 @@ public class PlayerController : MonoBehaviour
     }
     public void Transition3()
     {
-        transform.position = new Vector3(-2.34f, 1f, -37.74f);
+        transform.position = new Vector3(-2.34f, 1.5f, -37.74f);
         rain.SetActive(false);
         FadeOut3();
     }
