@@ -30,6 +30,8 @@ public class Chap5 : MonoBehaviour
 	public AudioSource p5;
 	public GameObject bird;
 	public GameObject fish;
+	public GameObject dancers;
+	public AudioSource c6;
 	private int i = 0;
 
 	// Update is called once per frame
@@ -104,12 +106,12 @@ public class Chap5 : MonoBehaviour
 		if(i == 4)
         {
 			fish.SetActive(true);
+			Invoke("transition", 5);
         }
 	}
 		public void transition()
 	{
 		playerController.firstTime = true;
-		rain.SetActive(false);
 		playerController.chapter = 6;
 	}
 }

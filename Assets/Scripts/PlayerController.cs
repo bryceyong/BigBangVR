@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     public AudioSource buttonClick;
     public AudioSource c3p1;
     public AudioSource c3p2;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -77,7 +78,14 @@ public class PlayerController : MonoBehaviour
 
         if (chapter == 5 && firstTime)
         {
-            transform.position = new Vector3(27.78f, 1.5f, -37.91f);
+            transform.position = new Vector3(27.78f, 2f, -37.91f);
+
+        }
+
+        if (chapter == 6 && firstTime)
+        {
+
+            transform.position = new Vector3(0.5f, 1f, -72f);
 
         }
     }
