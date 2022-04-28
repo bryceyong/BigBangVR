@@ -79,6 +79,7 @@ public class PlayerController : MonoBehaviour
         if (chapter == 5 && firstTime)
         {
             transform.position = new Vector3(27.78f, 1.5f, -37.91f);
+            firstTime = false;
 
         }
 

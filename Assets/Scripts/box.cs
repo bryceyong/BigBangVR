@@ -6,6 +6,8 @@ public class box : MonoBehaviour
 {
     public bool tilt = false;
     public GameObject fish;
+    public PlayerController playerController;
+    public bool once = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +22,7 @@ public class box : MonoBehaviour
             Vector3 direction = new Vector3(90, 0, 0);
             Quaternion targetRotation = Quaternion.Euler(direction);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, Time.deltaTime * 50f);
-            fish.SetActive(true);
+            fish.SetActive(true);  
         }
         
     }
@@ -30,6 +32,15 @@ public class box : MonoBehaviour
         print("tilt");
         tilt = true;
         FishSwim.boxTilt = true;
+        Invoke("Transition", 8);
 
     }
+
+    public void Transition()
+    {
+        playerController.chapter = 6;
+        playerController.firstTime = true;
+    }
+
+
 }

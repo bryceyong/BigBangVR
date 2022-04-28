@@ -60,13 +60,6 @@ public class Chap5 : MonoBehaviour
 			timeRemaining = 2;
 			i++;
 		}
-		if (!buttonPressed && i == 7)
-		{
-			transition();
-		}
-
-
-
 	}
 
 	public void Delay()
@@ -106,12 +99,6 @@ public class Chap5 : MonoBehaviour
 		if(i == 4)
         {
 			fish.SetActive(true);
-			Invoke("transition", 5);
         }
-	}
-		public void transition()
-	{
-		playerController.firstTime = true;
-		playerController.chapter = 6;
 	}
 }
