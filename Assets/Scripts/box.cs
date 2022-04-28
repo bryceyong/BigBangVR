@@ -6,7 +6,6 @@ public class box : MonoBehaviour
 {
     public bool tilt = false;
     public GameObject fish;
-    public PlayerController playerController;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,12 +30,6 @@ public class box : MonoBehaviour
         print("tilt");
         tilt = true;
         FishSwim.boxTilt = true;
-        Invoke("transition", 5);
-    }
 
-    public void transition()
-    {
-        playerController.firstTime = true;
-        playerController.chapter = 6;
     }
 }

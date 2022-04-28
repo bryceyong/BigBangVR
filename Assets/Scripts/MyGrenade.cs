@@ -45,7 +45,6 @@ using Valve.VR.InteractionSystem;
             {
 
                 playerController.chapter = 2;
-                playerController.firstTime = true;
             }
             }
         }
