@@ -21,6 +21,9 @@ public class PlayerController : MonoBehaviour
     public AudioSource buttonClick;
     public AudioSource c3p1;
     public AudioSource c3p2;
+    public GameObject tablet;
+    public GameObject gameplay;
+    public bool answer = false;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +41,14 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (chapter == 1 && firstTime)
+        {
+            gameplay.SetActive(true);
+            canvas3.SetActive(true);
+            FadeIn3();
+            Invoke("Transition1", 5f);
+            firstTime = false;
+        }
 
         if (chapter == 2 && firstTime)
         {
@@ -60,10 +71,15 @@ public class PlayerController : MonoBehaviour
             if (zNew < -13)
             {
                 FadeOut2();
-                transform.position = new Vector3(63.0f, 0.0f, -7f);
-                firstTime = false;
-                Invoke("C3P1", 2);
-                Invoke("C3P2", 6);
+                Galaxy();
+                if (answer)
+                {
+                    tablet.SetActive(false);
+                    transform.position = new Vector3(63.0f, 0.0f, -7f);
+                    firstTime = false;
+                    Invoke("C3P1", 2);
+                    Invoke("C3P2", 6);
+                }
             }
         }
 
@@ -195,4 +211,18 @@ public class PlayerController : MonoBehaviour
         rain.SetActive(false);
         FadeOut3();
     }
+
+    public void Transition1()
+    {
+        transform.position = new Vector3(0f, 1f, -1f);
+        tablet.SetActive(false);
+        FadeOut3();
+    }
+
+    public void Galaxy()
+    {
+        transform.position = new Vector3(100f, 100f, 100f);
+        tablet.SetActive(true);
+    }
+
 }
