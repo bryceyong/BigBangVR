@@ -15,11 +15,25 @@ public class choice : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            if (leftTrig.stateDown)
-            {
-                print("left");
-            }
-        
+
+        if (leftTrig.stateDown)
+        {
+            Left();
+        } else if (rightTrig.stateDown)
+        {
+            Right();
+        }
+
+    }
+
+    public void Left()
+    {
+        print("Left");
+    }
+
+    public void Right()
+    {
+        print("Right");
     }
 
 }
