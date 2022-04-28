@@ -32,6 +32,7 @@ public class Chap6 : MonoBehaviour
 	public GameObject dancers;
 	public AudioSource music;
 	public AudioSource c6;
+	public GameObject dancersObj;
 	private int i = 0;
 
 	// Update is called once per frame
@@ -106,9 +107,7 @@ public class Chap6 : MonoBehaviour
 		}
 		if (i == 3)
 		{
-			dancers.SetActive(true);
-			music.Stop();
-			c6.Play();
+			lever.SetActive(true);
 		}
 	}
 	public void transition()
@@ -116,5 +115,12 @@ public class Chap6 : MonoBehaviour
 		playerController.firstTime = true;
 		rain.SetActive(false);
 		playerController.chapter = 6;
+	}
+
+	public void Dance()
+    {
+		dancers.SetActive(true);
+		music.Stop();
+		c6.Play();
 	}
 }

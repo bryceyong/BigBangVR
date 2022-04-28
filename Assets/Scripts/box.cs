@@ -5,6 +5,7 @@ using UnityEngine;
 public class box : MonoBehaviour
 {
     public bool tilt = false;
+    public GameObject fish;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,7 @@ public class box : MonoBehaviour
             Vector3 direction = new Vector3(90, 0, 0);
             Quaternion targetRotation = Quaternion.Euler(direction);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, Time.deltaTime * 50f);
+            fish.SetActive(true);
         }
         
     }

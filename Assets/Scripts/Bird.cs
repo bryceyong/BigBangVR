@@ -12,6 +12,9 @@ public class Bird : MonoBehaviour
     public float zMax;
     public GameObject cage;
     public static bool birdCall = false;
+    public AudioSource chirp;
+    public AudioSource flap;
+    public bool playOnce = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +33,7 @@ public class Bird : MonoBehaviour
 
         if (cageOpen && once)
         {
-
+            BirdSounds();
             float yNew = transform.position.y +  speed1 * Time.deltaTime;
             transform.position = new Vector3(transform.position.x, yNew, transform.position.z);
             if (yNew > yMax)
@@ -49,6 +52,18 @@ public class Bird : MonoBehaviour
                     birdCall = true;
                 }
             }
+        }
+
+
+    }
+
+    public void BirdSounds()
+    {
+        if (playOnce)
+        {
+            chirp.Play();
+            flap.Play();
+            playOnce = false;
         }
     }
 }

@@ -11,6 +11,7 @@ public class FishSwim : MonoBehaviour
     public float xNew2;
     public bool once = true;
     public bool once2 = true;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +23,7 @@ public class FishSwim : MonoBehaviour
     {
         if (boxTilt)
         {
-
+            
             float zNew = transform.position.z + speed1 * Time.deltaTime;
             transform.position = new Vector3(transform.position.x, transform.position.y, zNew);
             print(zNew);
