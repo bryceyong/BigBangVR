@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         music.Play();
-        chapter = 1;
+        chapter = 0;
 
     }
 
@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
 
         if (chapter == 2 && firstTime)
         {
-            transform.position = new Vector3(29.6f, -0.5f, 0.5f);
+            transform.position = new Vector3(100, 100, 100);
             firstTime = false;
             canvas.SetActive(true);
             FadeOut();
@@ -60,10 +60,10 @@ public class PlayerController : MonoBehaviour
             if (zNew < -13)
             {
                 FadeOut2();
-                transform.position = new Vector3(63.0f, 0.0f, -7f);
+                transform.position = new Vector3(100, 100, 100);
                 firstTime = false;
-                Invoke("C3P1", 2);
-                Invoke("C3P2", 6);
+                //Invoke("C3P1", 2);
+                //Invoke("C3P2", 6);
             }
         }
 
@@ -78,7 +78,8 @@ public class PlayerController : MonoBehaviour
 
         if (chapter == 5 && firstTime)
         {
-            transform.position = new Vector3(27.78f, 1.5f, -37.91f);
+            //transform.position = new Vector3(27.78f, 1.5f, -37.91f);
+            transform.position = new Vector3(100f, 100f, 100f);
             firstTime = false;
 
         }
@@ -86,7 +87,9 @@ public class PlayerController : MonoBehaviour
         if (chapter == 6 && firstTime)
         {
 
-            transform.position = new Vector3(0.5f, 1.5f, -72f);
+            //transform.position = new Vector3(0.5f, 1.5f, -72f);
+            transform.position = new Vector3(100f, 100f, 100f);
+            firstTime = false;
 
         }
     }
@@ -192,7 +195,8 @@ public class PlayerController : MonoBehaviour
     }
     public void Transition3()
     {
-        transform.position = new Vector3(-2.34f, 1.5f, -37.74f);
+        //transform.position = new Vector3(-2.34f, 1.5f, -37.74f);
+        transform.position = new Vector3(100f, 100f, 100f);
         rain.SetActive(false);
         FadeOut3();
     }
