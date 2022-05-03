@@ -40,6 +40,7 @@ public class choice : MonoBehaviour
             question.SetText("Should Earth remain in the dark?");
             choice1.SetText("Yes, it should");
             choice2.SetText("No, it should not");
+            chapter1.SetActive(false);
             dark.SetActive(true);
         }
         if (playerController.chapter == 3)
@@ -47,6 +48,7 @@ public class choice : MonoBehaviour
             question.SetText("Which one of these 2 gasses were higher in percentage?");
             choice1.SetText("Oxygen");
             choice2.SetText("Argon");
+            chapter2.SetActive(false);
             dark.SetActive(false);
             water.SetActive(true);
         }
@@ -55,6 +57,7 @@ public class choice : MonoBehaviour
             question.SetText("What is the name of the first layer of the Earth?");
             choice1.SetText("Crust");
             choice2.SetText("Mantle");
+            chapter3.SetActive(false);
             water.SetActive(false);
             sphere.SetActive(true);
         }
@@ -63,6 +66,7 @@ public class choice : MonoBehaviour
             question.SetText("How far is the sun from the Earth");
             choice1.SetText("92.6 million miles");
             choice2.SetText("238.9 million miles");
+            chapter4.SetActive(false);
             anchor.SetActive(true);
         }
         if (playerController.chapter == 6)
@@ -70,14 +74,17 @@ public class choice : MonoBehaviour
             question.SetText("Which one of these creatures have hollow bones?");
             choice1.SetText("Bird");
             choice2.SetText("Fish");
+            chapter5.SetActive(false);
             bird.SetActive(true);
         }
         if (playerController.chapter == 7)
         {
-            question.SetText("How many hands do humans have?");
-            choice1.SetText("Left");
-            choice2.SetText("Right");
-            bird.SetActive(true);
+            question.SetText("People have made themselves the ______ dominating the world?");
+            choice1.SetText("prime swimmers");
+            choice2.SetText("prime hunters");
+            chapter6.SetActive(false);
+            dancers.SetActive(true);
+            
         }
 
     }
@@ -92,45 +99,45 @@ public class choice : MonoBehaviour
         }
         if (playerController.chapter == 2)
         {
-            chapter1.SetActive(false);
+            
             chapter2.SetActive(true);
             player.transform.transform.position = new Vector3(29.6f, -0.5f, 0.5f);
             score++;
         }
         if (playerController.chapter == 3)
         {
-            chapter2.SetActive(false);
+            
             chapter3.SetActive(true);
             player.transform.transform.position =  new Vector3(63.0f, 0.0f, -7f);
             score++;
         }
         if (playerController.chapter == 4)
         {
-            chapter3.SetActive(false);
+            
             chapter4.SetActive(true);
             player.transform.transform.position = new Vector3(-2.34f, 1.5f, -37.74f);
-            score++;
+
         }
         if (playerController.chapter == 5)
         {
-            chapter4.SetActive(false);
+            
             chapter5.SetActive(true);
             player.transform.transform.position = new Vector3(27.78f, 1.5f, -37.91f);
             score++;
         }
         if (playerController.chapter == 6)
         {
-            chapter5.SetActive(false);
+            
             chapter6.SetActive(true);
             player.transform.transform.position = new Vector3(0.5f, 1.5f, -72f);
-            score++;
+   
         }
         if (playerController.chapter == 7)
         {
-            chapter6.SetActive(false);
+            
             if (score > 3)
             {
-                chapter7A.SetActive(true);
+                chapter7B.SetActive(true);
             }
             else
             {
@@ -144,7 +151,61 @@ public class choice : MonoBehaviour
 
     public void Right()
     {
-        print("Right");
+        if (playerController.chapter == 0)
+        {
+            chapter1.SetActive(true);
+            player.transform.transform.position = new Vector3(0f, 1f, -1f);
+  
+        }
+        if (playerController.chapter == 2)
+        {
+            chapter1.SetActive(false);
+            chapter2.SetActive(true);
+            player.transform.transform.position = new Vector3(29.6f, -0.5f, 0.5f);
+ 
+        }
+        if (playerController.chapter == 3)
+        {
+            chapter2.SetActive(false);
+            chapter3.SetActive(true);
+            player.transform.transform.position = new Vector3(63.0f, 0.0f, -7f);
+ 
+        }
+        if (playerController.chapter == 4)
+        {
+            chapter3.SetActive(false);
+            chapter4.SetActive(true);
+            player.transform.transform.position = new Vector3(-2.34f, 1.5f, -37.74f);
+            score++;
+        }
+        if (playerController.chapter == 5)
+        {
+            chapter4.SetActive(false);
+            chapter5.SetActive(true);
+            player.transform.transform.position = new Vector3(27.78f, 1.5f, -37.91f);
+    
+        }
+        if (playerController.chapter == 6)
+        {
+            chapter5.SetActive(false);
+            chapter6.SetActive(true);
+            player.transform.transform.position = new Vector3(0.5f, 1.5f, -72f);
+            score++;
+        }
+        if (playerController.chapter == 7)
+        {
+            chapter6.SetActive(false);
+            if (score > 3)
+            {
+                chapter7B.SetActive(true);
+            }
+            else
+            {
+                chapter7A.SetActive(true);
+            }
+            player.transform.transform.position = new Vector3(39.45f, -7.1f, -51.54f);
+            c6.Stop();
+        }
     }
 
 }
