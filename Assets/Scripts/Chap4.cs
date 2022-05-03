@@ -21,6 +21,7 @@ public class Chap4 : MonoBehaviour
 	public TextMeshProUGUI progress;
 	public GameObject lever;
 	public GameObject raygun;
+	public GameObject hint;
 	public PlayerController playerController;
 	public bool buttonPressed;
 	public float timeRemaining = 2;
@@ -119,6 +120,7 @@ public class Chap4 : MonoBehaviour
         }
 		if (i == 6)
 		{
+			hint.SetActive(true);
 			raygun.SetActive(true);
 		}
 	}

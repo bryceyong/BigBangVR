@@ -18,6 +18,8 @@ public class choice : MonoBehaviour
     public GameObject chapter4;
     public GameObject chapter5;
     public GameObject chapter6;
+    public GameObject chapter7A;
+    public GameObject chapter7B;
     public GameObject player;
     public GameObject dark;
     public GameObject water;
@@ -25,6 +27,7 @@ public class choice : MonoBehaviour
     public GameObject bird;
     public GameObject dancers;
     public GameObject anchor;
+    public int score = 0;
     // Start is called before the first frame update
 
 
@@ -68,6 +71,13 @@ public class choice : MonoBehaviour
             choice2.SetText("Fish");
             bird.SetActive(true);
         }
+        if (playerController.chapter == 7)
+        {
+            question.SetText("How many hands do humans have?");
+            choice1.SetText("Left");
+            choice2.SetText("Right");
+            bird.SetActive(true);
+        }
 
     }
 
@@ -77,36 +87,56 @@ public class choice : MonoBehaviour
         {
             chapter1.SetActive(true);
             player.transform.transform.position = new Vector3(0f, 1f, -1f);
+            score++;
         }
         if (playerController.chapter == 2)
         {
             chapter1.SetActive(false);
             chapter2.SetActive(true);
             player.transform.transform.position = new Vector3(29.6f, -0.5f, 0.5f);
+            score++;
         }
         if (playerController.chapter == 3)
         {
             chapter2.SetActive(false);
             chapter3.SetActive(true);
             player.transform.transform.position =  new Vector3(63.0f, 0.0f, -7f);
+            score++;
         }
         if (playerController.chapter == 4)
         {
             chapter3.SetActive(false);
             chapter4.SetActive(true);
             player.transform.transform.position = new Vector3(-2.34f, 1.5f, -37.74f);
+            score++;
         }
         if (playerController.chapter == 5)
         {
             chapter4.SetActive(false);
             chapter5.SetActive(true);
             player.transform.transform.position = new Vector3(27.78f, 1.5f, -37.91f);
+            score++;
         }
         if (playerController.chapter == 6)
         {
             chapter5.SetActive(false);
             chapter6.SetActive(true);
             player.transform.transform.position = new Vector3(0.5f, 1.5f, -72f);
+            score++;
+        }
+        if (playerController.chapter == 7)
+        {
+            chapter6.SetActive(false);
+            if (score > 3)
+            {
+                chapter7B.SetActive(true);
+            }
+            else
+            {
+                chapter7A.SetActive(true);
+            }
+            player.transform.transform.position = new Vector3(30f, -6f, -59f);
+            score++;
         }
 
     }
