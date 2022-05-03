@@ -83,8 +83,8 @@ public class NarratorChap2 : MonoBehaviour
 	public void Delay()
     {
 		narration.SetText(narrationArr2[i]);
+		progress.SetText((i + 1).ToString() + " / 12");
 
-	
 		if (i == 0)
 		{
 			p1.Play();

@@ -18,6 +18,7 @@ public class Chap4 : MonoBehaviour
 	};
 
 	public TextMeshProUGUI narration;
+	public TextMeshProUGUI progress;
 	public GameObject lever;
 	public GameObject raygun;
 	public PlayerController playerController;
@@ -75,6 +76,7 @@ public class Chap4 : MonoBehaviour
     {
 		if (i < 7)
 		{
+			progress.SetText((i + 1).ToString() + " / 7");
 			narration.SetText(narrationArr2[i]);
 		}
 		if (i == 0)

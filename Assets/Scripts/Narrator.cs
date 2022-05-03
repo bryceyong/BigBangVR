@@ -65,6 +65,7 @@ public class Narrator : MonoBehaviour
     {
 		buttonPressed = true;
 		narration.SetText(narrationArr[i]);
+		progress.SetText((i + 1).ToString() + " / 4");
 		if (i < 4)
 		{
 			i++;

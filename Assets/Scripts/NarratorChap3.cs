@@ -14,6 +14,7 @@ public class NarratorChap3 : MonoBehaviour
 	};
 
 	public TextMeshProUGUI narration;
+	public TextMeshProUGUI progress;
 	public GameObject grass;
 	public GameObject shrooms;
 	public GameObject rain;
@@ -56,6 +57,7 @@ public class NarratorChap3 : MonoBehaviour
 
 	public void Delay()
     {
+		progress.SetText((i + 1).ToString() + " / 3");
 		narration.SetText(narrationArr2[i]);
 		if (i < 3)
 		{

@@ -5,6 +5,8 @@ using UnityEngine;
 public class SunScale : MonoBehaviour
 {
     public float speed = 0;
+    public float i = 0;
+    public PlayerController playerController;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +31,12 @@ public class SunScale : MonoBehaviour
 
     public void Stop()
     {
+        i++;
+        if(i == 3)
+        {
+            playerController.chapter = 5;
+            playerController.firstTime = true;
+        }
         speed = 0;
     }
 

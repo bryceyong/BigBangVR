@@ -17,7 +17,7 @@ public class Chap3A : MonoBehaviour
 	};
 
 	public TextMeshProUGUI narration;
-
+	public TextMeshProUGUI progress;
 	public GameObject redRock;
 	public GameObject blackRock;
 	public GameObject tp1;
@@ -50,6 +50,7 @@ public class Chap3A : MonoBehaviour
 	public void Delay()
     {
 		narration.SetText(narrationArr3A[i]);
+		progress.SetText((i + 1).ToString() + " / 6");
 		if (i < 6)
 		{
 			i++;

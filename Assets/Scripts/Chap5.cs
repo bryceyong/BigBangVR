@@ -16,6 +16,7 @@ public class Chap5 : MonoBehaviour
 	};
 
 	public TextMeshProUGUI narration;
+	public TextMeshProUGUI progress;
 	public GameObject grass;
 	public GameObject shrooms;
 	public GameObject rain;
@@ -66,6 +67,7 @@ public class Chap5 : MonoBehaviour
 	{
 		if (i < 5)
 		{
+			progress.SetText((i + 1).ToString() + " / 5");
 			narration.SetText(narrationArr2[i]);
 		}
 		if (i == 0)
