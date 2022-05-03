@@ -27,6 +27,7 @@ public class choice : MonoBehaviour
     public GameObject bird;
     public GameObject dancers;
     public GameObject anchor;
+    public AudioSource c6;
     public int score = 0;
     // Start is called before the first frame update
 
@@ -129,14 +130,14 @@ public class choice : MonoBehaviour
             chapter6.SetActive(false);
             if (score > 3)
             {
-                chapter7B.SetActive(true);
+                chapter7A.SetActive(true);
             }
             else
             {
                 chapter7A.SetActive(true);
             }
-            player.transform.transform.position = new Vector3(30f, -6f, -59f);
-            score++;
+            player.transform.transform.position = new Vector3(39.45f, -7.1f, -51.54f);
+            c6.Stop();
         }
 
     }

@@ -10,6 +10,8 @@ public class BirdSet : MonoBehaviour
     public float speed1;
     public float speed2;
     public float zMax;
+    public AudioSource chirp;
+    public AudioSource flap;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +24,8 @@ public class BirdSet : MonoBehaviour
         if (Bird.birdCall)
         {
 
-
+            chirp.Play();
+            flap.Play();
 
             float zNew = transform.position.z - speed1 * Time.deltaTime;
             transform.position = new Vector3(transform.position.x, transform.position.y, zNew);

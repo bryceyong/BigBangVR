@@ -22,7 +22,6 @@ public class BirdSet2 : MonoBehaviour
 
         if (Bird.birdCall)
         {
-
             float zNew = transform.position.z - speed1 * Time.deltaTime;
             transform.position = new Vector3(transform.position.x, transform.position.y, zNew);
 
