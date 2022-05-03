@@ -102,7 +102,7 @@ public class Chap6 : MonoBehaviour
 		if (i == 3)
 		{
 			lever.SetActive(true);
-			Invoke("transition", 30);
+			Invoke("transition", 60);
 		}
 		if (i == 4)
         {
