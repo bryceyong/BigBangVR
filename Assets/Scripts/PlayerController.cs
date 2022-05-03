@@ -82,7 +82,7 @@ public class PlayerController : MonoBehaviour
             canvas3.SetActive(true);
             FadeIn3();
             firstTime = false;
-            Invoke("Transition3", 5f);
+            Invoke("TransitionU", 5f);
 
         }
 
@@ -93,7 +93,7 @@ public class PlayerController : MonoBehaviour
             canvas3.SetActive(true);
             FadeIn3();
             firstTime = false;
-            Invoke("Transition3", 5f);
+            Invoke("TransitionU", 5f);
 
         }
 
@@ -104,7 +104,7 @@ public class PlayerController : MonoBehaviour
             canvas3.SetActive(true);
             FadeIn3();
             firstTime = false;
-            Invoke("Transition3", 5f);
+            Invoke("TransitionU", 5f);
 
         }
     }
