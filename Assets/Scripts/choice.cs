@@ -28,6 +28,7 @@ public class choice : MonoBehaviour
     public GameObject dancers;
     public GameObject anchor;
     public AudioSource c6;
+    public bool once;
     public int score = 0;
     // Start is called before the first frame update
 
@@ -40,7 +41,6 @@ public class choice : MonoBehaviour
             question.SetText("Should Earth remain in the dark?");
             choice1.SetText("Yes, it should");
             choice2.SetText("No, it should not");
-            chapter1.SetActive(false);
             dark.SetActive(true);
         }
         if (playerController.chapter == 3)
@@ -48,7 +48,6 @@ public class choice : MonoBehaviour
             question.SetText("Which one of these 2 gasses were higher in percentage?");
             choice1.SetText("Oxygen");
             choice2.SetText("Argon");
-            chapter2.SetActive(false);
             dark.SetActive(false);
             water.SetActive(true);
         }
@@ -57,7 +56,6 @@ public class choice : MonoBehaviour
             question.SetText("What is the name of the first layer of the Earth?");
             choice1.SetText("Crust");
             choice2.SetText("Mantle");
-            chapter3.SetActive(false);
             water.SetActive(false);
             sphere.SetActive(true);
         }
@@ -66,7 +64,6 @@ public class choice : MonoBehaviour
             question.SetText("How far is the sun from the Earth");
             choice1.SetText("92.6 million miles");
             choice2.SetText("238.9 million miles");
-            chapter4.SetActive(false);
             anchor.SetActive(true);
         }
         if (playerController.chapter == 6)
@@ -74,7 +71,6 @@ public class choice : MonoBehaviour
             question.SetText("Which one of these creatures have hollow bones?");
             choice1.SetText("Bird");
             choice2.SetText("Fish");
-            chapter5.SetActive(false);
             bird.SetActive(true);
         }
         if (playerController.chapter == 7)
@@ -82,15 +78,29 @@ public class choice : MonoBehaviour
             question.SetText("People have made themselves the ______ dominating the world?");
             choice1.SetText("prime swimmers");
             choice2.SetText("prime hunters");
-            chapter6.SetActive(false);
             dancers.SetActive(true);
             
         }
 
     }
 
+    public void toggleGame()
+    {
+        if (once)
+        {
+            chapter1.SetActive(false);
+            chapter2.SetActive(false);
+            chapter3.SetActive(false);
+            chapter4.SetActive(false);
+            chapter5.SetActive(false);
+            chapter6.SetActive(false);
+            once = false;
+        }
+    }
+
     public void Left()
     {
+        once = true;
         if(playerController.chapter == 0)
         {
             chapter1.SetActive(true);
@@ -151,25 +161,26 @@ public class choice : MonoBehaviour
 
     public void Right()
     {
+        once = true;
         if (playerController.chapter == 0)
         {
             chapter1.SetActive(true);
             player.transform.transform.position = new Vector3(0f, 1f, -1f);
-  
+    
         }
         if (playerController.chapter == 2)
         {
             chapter1.SetActive(false);
             chapter2.SetActive(true);
             player.transform.transform.position = new Vector3(29.6f, -0.5f, 0.5f);
- 
+          
         }
         if (playerController.chapter == 3)
         {
             chapter2.SetActive(false);
             chapter3.SetActive(true);
             player.transform.transform.position = new Vector3(63.0f, 0.0f, -7f);
- 
+          
         }
         if (playerController.chapter == 4)
         {
@@ -183,7 +194,7 @@ public class choice : MonoBehaviour
             chapter4.SetActive(false);
             chapter5.SetActive(true);
             player.transform.transform.position = new Vector3(27.78f, 1.5f, -37.91f);
-    
+          
         }
         if (playerController.chapter == 6)
         {
@@ -197,7 +208,7 @@ public class choice : MonoBehaviour
             chapter6.SetActive(false);
             if (score > 3)
             {
-                chapter7B.SetActive(true);
+                chapter7A.SetActive(true);
             }
             else
             {

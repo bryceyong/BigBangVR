@@ -21,6 +21,12 @@ public class PlayerController : MonoBehaviour
     public AudioSource buttonClick;
     public AudioSource c3p1;
     public AudioSource c3p2;
+    public GameObject chapter1;
+    public GameObject chapter2;
+    public GameObject chapter3;
+    public GameObject chapter4;
+    public GameObject chapter5;
+    public GameObject chapter6;
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +47,7 @@ public class PlayerController : MonoBehaviour
 
         if (chapter == 2 && firstTime)
         {
+            chapter1.SetActive(false);
             transform.position = new Vector3(100, 100, 100);
             firstTime = false;
             canvas.SetActive(true);
@@ -60,6 +67,7 @@ public class PlayerController : MonoBehaviour
             if (zNew < -13)
             {
                 FadeOut2();
+                chapter2.SetActive(false);
                 transform.position = new Vector3(100, 100, 100);
                 firstTime = false;
                 //Invoke("C3P1", 2);
@@ -220,6 +228,10 @@ public class PlayerController : MonoBehaviour
     {
         //transform.position = new Vector3(-2.34f, 1.5f, -37.74f);
         transform.position = new Vector3(100f, 100f, 100f);
+        chapter3.SetActive(false);
+        chapter4.SetActive(false);
+        chapter5.SetActive(false);
+        chapter6.SetActive(false);
         FadeOut3();
     }
 
