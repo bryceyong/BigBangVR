@@ -50,6 +50,8 @@ public class Bird : MonoBehaviour
                 {  
                     speed2 = 0;
                     birdCall = true;
+                    playOnce = true;
+                    BirdSounds();
                 }
             }
         }

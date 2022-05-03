@@ -12,7 +12,6 @@ public class Chap6 : MonoBehaviour
 		"Earth has a range of animals that are vegetarian, carnivorous and herbivores.",
 		"People have made themselves the prime hunter dominating the world, leaving the other animals to adapt to new environments and situations.",
 		"The creation of humans is a difficult task! But I know you are up to the challenge creator. Go ahead and pull the lever to begin the process!",
-		"Wow, that was some show! Great work creator! ",
 	};
 
 	public TextMeshProUGUI narration;
@@ -54,7 +53,7 @@ public class Chap6 : MonoBehaviour
 	}
 	public void skip()
 	{
-		if (!buttonPressed && i < 5)
+		if (!buttonPressed && i < 4)
 		{
 			buttonClick.Play();
 			Delay();
@@ -62,20 +61,13 @@ public class Chap6 : MonoBehaviour
 			timeRemaining = 2;
 			i++;
 		}
-		if (!buttonPressed && i == 7)
-		{
-			transition();
-		}
-
-
-
 	}
 
 	public void Delay()
 	{
-		if (i < 5)
+		if (i < 4)
 		{
-			progress.SetText((i + 1).ToString() + " / 5");
+			progress.SetText((i + 1).ToString() + " / 4");
 			narration.SetText(narrationArr2[i]);
 		}
 		if (i == 0)
@@ -110,13 +102,17 @@ public class Chap6 : MonoBehaviour
 		if (i == 3)
 		{
 			lever.SetActive(true);
+			Invoke("transition", 30);
 		}
+		if (i == 4)
+        {
+			transition();
+        }
 	}
 	public void transition()
 	{
 		playerController.firstTime = true;
-		rain.SetActive(false);
-		playerController.chapter = 6;
+		playerController.chapter = 7;
 	}
 
 	public void Dance()

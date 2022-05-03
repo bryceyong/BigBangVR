@@ -8,6 +8,7 @@ public class box : MonoBehaviour
     public GameObject fish;
     public PlayerController playerController;
     public bool once = true;
+    public AudioSource splash;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,8 +33,8 @@ public class box : MonoBehaviour
         print("tilt");
         tilt = true;
         FishSwim.boxTilt = true;
+        splash.Play();
         Invoke("Transition", 8);
-
     }
 
     public void Transition()

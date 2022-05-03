@@ -79,8 +79,10 @@ public class PlayerController : MonoBehaviour
         if (chapter == 5 && firstTime)
         {
             //transform.position = new Vector3(27.78f, 1.5f, -37.91f);
-            transform.position = new Vector3(100f, 100f, 100f);
+            canvas3.SetActive(true);
+            FadeIn3();
             firstTime = false;
+            Invoke("Transition3", 5f);
 
         }
 
@@ -88,8 +90,21 @@ public class PlayerController : MonoBehaviour
         {
 
             //transform.position = new Vector3(0.5f, 1.5f, -72f);
-            transform.position = new Vector3(100f, 100f, 100f);
+            canvas3.SetActive(true);
+            FadeIn3();
             firstTime = false;
+            Invoke("Transition3", 5f);
+
+        }
+
+        if (chapter == 7 && firstTime)
+        {
+
+            //transform.position = new Vector3(0.5f, 1.5f, -72f);
+            canvas3.SetActive(true);
+            FadeIn3();
+            firstTime = false;
+            Invoke("Transition3", 5f);
 
         }
     }
@@ -200,4 +215,12 @@ public class PlayerController : MonoBehaviour
         rain.SetActive(false);
         FadeOut3();
     }
+
+    public void TransitionU()
+    {
+        //transform.position = new Vector3(-2.34f, 1.5f, -37.74f);
+        transform.position = new Vector3(100f, 100f, 100f);
+        FadeOut3();
+    }
+
 }
