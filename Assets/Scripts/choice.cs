@@ -27,6 +27,7 @@ public class choice : MonoBehaviour
     public GameObject bird;
     public GameObject dancers;
     public GameObject anchor;
+    public GameObject choiceRoom;
     public AudioSource c6;
     public bool once;
     public int score = 0;
@@ -144,7 +145,7 @@ public class choice : MonoBehaviour
         if (playerController.chapter == 7)
         {
             
-            if (score < 3)
+            if (score > 3)
             {
                 chapter7B.SetActive(true);
             }
@@ -214,6 +215,7 @@ public class choice : MonoBehaviour
                 chapter7A.SetActive(true);
             }
             player.transform.transform.position = new Vector3(39.45f, -7.1f, -51.54f);
+            choiceRoom.SetActive(false);
             c6.Stop();
         }
     }
