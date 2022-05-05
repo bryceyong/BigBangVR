@@ -105,7 +105,6 @@ public class choice : MonoBehaviour
         {
             chapter1.SetActive(true);
             player.transform.transform.position = new Vector3(0f, 1f, -1f);
-            score++;
         }
         if (playerController.chapter == 2)
         {
@@ -145,7 +144,7 @@ public class choice : MonoBehaviour
         if (playerController.chapter == 7)
         {
             
-            if (score > 3)
+            if (score < 3)
             {
                 chapter7B.SetActive(true);
             }
@@ -166,7 +165,7 @@ public class choice : MonoBehaviour
         {
             chapter1.SetActive(true);
             player.transform.transform.position = new Vector3(0f, 1f, -1f);
-    
+            score++;
         }
         if (playerController.chapter == 2)
         {
@@ -208,7 +207,7 @@ public class choice : MonoBehaviour
             chapter6.SetActive(false);
             if (score > 3)
             {
-                chapter7A.SetActive(true);
+                chapter7B.SetActive(true);
             }
             else
             {
